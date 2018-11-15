@@ -1,0 +1,33 @@
+<div class="col-sm-12 col-md-12 col-xs-12 reactform">
+    <div class="col-sm-12 col-md-2 col-xs-2">
+<table formArrayName class="table table-bordered">
+    <th>Speech Index</th>
+    <tr *ngFor="let x of myForm.get('spech').controls; let i= index;">
+        <td>Speech {{i}}</td>
+    </tr>
+</table>
+</div>
+     <div class="col-sm-12 col-md-10 col-xs-10">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+         <div>
+            <textarea formControlName="speech" ></textarea>
+         </div>
+            <input placeholder="Author" type="text" formControlName="author">
+            <input class="key" placeholder="Subject Area Keywords" type="text" formControlName="key">
+            <input class="key" type="date" placeholder="Date" formControlName="date">
+            <div class="spButton">
+                <span>
+                    <button (click)="delete">Delete</button>
+                </span>
+                <span class="shaButton">
+                    <button type="submit" [disabled]="myForm.invalid">
+                        Send
+                    </button>
+                </span>
+                <span class="shaButton">
+                    <button (click)="share">Share</button>
+                </span>
+            </div>
+        </form>
+     </div>
+</div>

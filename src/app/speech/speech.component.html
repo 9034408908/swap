@@ -1,0 +1,42 @@
+<div class="col-sm-12 col-md-12 col-xs-12 details">
+    <div class="col-sm-12 col-md-2 col-xs-2">
+<table class="table table-bordered">
+    <th>Speech Index</th>
+    <tr *ngFor="let x of spech; let i= index;">
+        <td>Speech {{i}} <span  class="caret" (click)="edit(x)"></span></td>
+    </tr>
+</table>
+</div>
+     <div class="col-sm-12 col-md-10 col-xs-10">
+         <div>
+            <textarea placeholder="Write Your Speech here and Save. For edit your speech please click in index caret sign....." [(ngModel)]="speech.speechone"></textarea>
+         </div>
+            <input placeholder="Author" [(ngModel)]="speech.author">
+            <input class="key" placeholder="Subject Area Keywords" [(ngModel)]="speech.key">
+            <input class="key" type ="date" placeholder="Date" [(ngModel)]="speech.date">
+            <div class="spButton">
+                <span>
+                    <button (click)="delete(i)">Delete</button>
+                </span>
+                <span *ngIf="btn_stt" class="shaButton">
+                    <button (click)="save()">
+                        Save
+                    </button>
+                </span>
+                <span *ngIf="!btn_stt" class="shaButton">
+                    <button (click)="update()">
+                        Update
+                    </button>
+                </span>
+                <span class="shaButton">
+                    <button (click)="share()">Share</button>
+                </span>
+            </div>
+     </div>
+</div>
+<hr>
+<div class="reactive">
+    <button class="btn btn-success" (click)="reactive()">
+        For Reactive Form Please Click...
+    </button>
+    </div>

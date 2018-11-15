@@ -1,0 +1,19 @@
+ul {
+    border: 1px solid black;
+    width: 95%;
+    margin-left: 29px;
+}
+ul li{
+    border-left:1px solid black;
+    text-align: center;
+}
+li:hover{
+    background-color: #eee;
+}
+li.active > a{
+    color:#000;
+    text-decoration: none;
+}
+.header {
+    padding-top:20px;
+}

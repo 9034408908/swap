@@ -1,0 +1,33 @@
+textarea {
+    width: 95%;
+    height: 200px;
+}
+.spButton{
+    padding-left:65%;
+    padding-top: 1%;
+}
+.shaButton{
+    padding-left: 22%;
+}
+.key {
+    margin-left:10%;
+}
+th {
+    text-align: center;
+    padding: 10px;
+}
+td {
+    text-align: center;
+    cursor:pointer;
+}
+td:hover {
+    background-color: #eee;
+}
+input {
+    text-align: center;
+        width: 25%;
+}
+.reactform {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
